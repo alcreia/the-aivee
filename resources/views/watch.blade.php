@@ -26,5 +26,6 @@
 	</div>
 	<!-- Scripts -->
 	@include('scripts.footerscript')
+	<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

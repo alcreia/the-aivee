@@ -4,9 +4,7 @@
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<a href="javascript:void(0)" onclick="aboutUs()">About us</a>
 		<a href="javascript:void(0)" onclick="contactUs()">Contact Us</a>
-		<a href="#">Display Settings</a>
-		<a href="#">Change Language</a>
-		<a href="#">References</a>
+		<a href="#">Disclaimer</a>
 		<div>
 			<a href="{{ route('logout') }}" onclick="event.preventDefault();
   	            document.getElementById('logout-form').submit();">
@@ -27,7 +25,7 @@
 <div id="aboutUs">
 	<p>
 		<span>“ It’s not just a book, it’s iv-Book “</span><br><br>
-		Generasi millenial dan seterusnya membutuhkan revolusi dalam membaca buku. The Aivee company didirikan untuk membawa revolusi tersebut dalam bentuk interactive virtual book (iv-Book). Start-up ini didirikan oleh 10 mahasiswa Sekolah Bisnis dan Manajemen Institut Teknologi Bandung (SBM ITB) pada bulan September 2018. Berawal dari melihat beberapa masalah seperti semakin lama semakin banyak orang malas membaca buku padahal banyak nilai baik yang terkandung di dalamnya, banyak buku berkualitas yang pendistribusiannya kurang luas, dll. Di sisi lain, semakin banyak orang yang senang menonton dan mencari hiburan lewat internet. Kami melihat peluang untuk menggabungkan buku-buku berkualitas dan teknologi informasi,tersebut kepada lebih banyak orang dengan cara yang lebih menyenangkan.
+		Generasi millenial dan seterusnya membutuhkan revolusi dalam membaca buku. The Aivee Company didirikan untuk membawa revolusi tersebut dalam bentuk interactive virtual book (iv-Book). Start-up ini didirikan oleh 10 mahasiswa Sekolah Bisnis dan Manajemen Institut Teknologi Bandung (SBM ITB) pada bulan September 2018. Berawal dari melihat beberapa masalah seperti semakin lama semakin banyak orang malas membaca buku padahal banyak nilai baik yang terkandung di dalamnya, banyak buku berkualitas yang pendistribusiannya kurang luas, dll. Di sisi lain, semakin banyak orang yang senang menonton dan mencari hiburan lewat internet. Kami melihat peluang untuk menggabungkan buku-buku berkualitas dan teknologi informasi,tersebut kepada lebih banyak orang dengan cara yang lebih menyenangkan.
 		<br><br>
 		Chief Executive Officer (CEO): Vioni Giovanni <br>
 		Sekretaris: Stefani Dwi Noviani <br>
