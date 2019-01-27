@@ -1,0 +1,19 @@
+body {
+	font-family: 'Fredoka One', cursive;
+	background-color: #262626;
+	color: #f2f2f2;
+}
+
+.video {
+	text-align: center;
+}
+
+iframe {
+	height: 90vh;
+	width: 100%;
+}
+
+a, a:hover {
+	color: #ffcc00;
+	margin: auto 30px;
+}

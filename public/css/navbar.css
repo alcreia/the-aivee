@@ -1,0 +1,72 @@
+.navbar {
+	padding: 15px 0;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+#logo {
+	height: 120px;
+	margin-top: -20%;
+	margin-bottom: -20%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#aboutUs, #contactUs {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 20%;
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    padding-top: 60px;
+    margin: auto;
+    transition: 0.1s;
+    color: #f2f2f2;
+}
+
+#aboutUs p, #contactUs p {
+    padding: 50px;
+}
+
+#aboutUs span, #contactUs span {
+    font-size: 1.25rem;
+    color: #ffcc00;
+}
+
+#mini {
+    font-size: 5px;
+}

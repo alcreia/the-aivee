@@ -1,0 +1,71 @@
+body {
+	font-family: 'Fredoka One', cursive;
+	background-color: #262626;
+	color: #f2f2f2;
+}
+
+.content {
+	margin-top: 10%;
+
+}
+
+.cover-etc {
+	text-align: center;
+	padding: 0 4em;
+}
+
+#cover {
+	max-width: 300px;
+	max-height: 400px;
+	border-radius: 10px;
+}
+
+.synopsis {
+	padding: 0 4em;
+}
+
+#synopsis {
+	font-size: 0.8rem;
+}
+
+.chapters {
+	height: 100%;
+	width: 80%;
+	position: absolute;
+	right: 0;
+	top: auto;
+	border: 1px solid #ffcc00;
+	border-radius: 10px 0px 0px 10px;
+	border-right: 0;
+	padding: 5px;
+	overflow-y: scroll;
+}
+
+li {
+	margin: auto;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #f2f2f2;
+}
+
+a:hover, a:active, .btn-link, .btn-link:hover {
+	text-decoration: none;
+	color: #ffcc00;
+}
+
+#buylogo {
+	height: 200px;
+	margin-top: -20%;
+	margin-bottom: -20%;
+	
+}
+
+.card-header {
+	background-color: #262626;
+}
+
+.card-body {
+	background-color: #464646;
+}
