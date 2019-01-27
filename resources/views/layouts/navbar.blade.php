@@ -4,7 +4,7 @@
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<a href="javascript:void(0)" onclick="aboutUs()">About us</a>
 		<a href="javascript:void(0)" onclick="contactUs()">Contact Us</a>
-		<a href="#">Disclaimer</a>
+		<a href="javascript:void(0)" onclick="disclaimer()">Disclaimer</a>
 		<div>
 			<a href="{{ route('logout') }}" onclick="event.preventDefault();
   	            document.getElementById('logout-form').submit();">
@@ -48,6 +48,20 @@
 
 	</p>
 </div>
+<div id="disclaimer">
+	<p>
+		Last updated: January 26, 2019<br>
+		<br>
+		The information contained on http://www.theaivee.com website (the "Service") is for general information purposes only.<br>
+		<br>
+		iv-book assumes no responsibility for errors or omissions in the contents on the Service.<br>
+		<br>
+		In no event shall iv-book be liable for any special, direct, indirect, consequential, or incidental damages or any damages whatsoever, whether in an action of contract, negligence or other tort, arising out of or in connection with the use of the Service or the contents of the Service. iv-book reserves the right to make additions, deletions, or modification to the contents on the Service at any time without prior notice. This Disclaimer for iv-book has been created with the help of TermsFeed.<br>
+		<br>
+		iv-book does not warrant that the website is free of viruses or other harmful components.
+				
+	</p>
+</div>
 
 <script type="text/javascript">
 	function openNav() {
@@ -58,14 +72,22 @@
     	document.getElementById("sidenav").style.width = "0";
     	document.getElementById("aboutUs").style.width = "0";
     	document.getElementById("contactUs").style.width = "0";
+    	document.getElementById("disclaimer").style.width = "0";
 	} 
 
 	function aboutUs() {
 		document.getElementById("aboutUs").style.width = "80%";
 		document.getElementById("contactUs").style.width = "0";
+		document.getElementById("disclaimer").style.width = "0";
 	}
 	function contactUs() {
 		document.getElementById("contactUs").style.width = "80%";
 		document.getElementById("aboutUs").style.width = "0";
+		document.getElementById("disclaimer").style.width = "0";
+	}
+	function disclaimer() {
+		document.getElementById("contactUs").style.width = "0";
+		document.getElementById("aboutUs").style.width = "0";
+		document.getElementById("disclaimer").style.width = "80%";
 	}
 </script>

@@ -18,7 +18,7 @@
 						Welcome to<br>
 						<img src="{{URL::asset('img/logo/type.png')}}" id='logotitle'/><br>
 						<span id="title">What is iv-book?</span><br>
-						Interactive virual book (iv-Book) adalah cara terbaru untuk menikmati sebuah buku. Berawal dari buku konvensional, buku ini telah direvolusi menjadi format digital, melebihi e-book dan audio book. Sesuai dengan namanya, "interactive-virtual book", “buku” ini berbentuk video interaktif dan forum diskusi yang mengantarkan isi buku secara praktis dan menyenangkan.<br>
+						Interactive virtual book (iv-Book) adalah cara terbaru untuk menikmati sebuah buku. Berawal dari buku konvensional, buku ini telah direvolusi menjadi format digital, melebihi e-book dan audio book. Sesuai dengan namanya, "interactive-virtual book", “buku” ini berbentuk video interaktif dan forum diskusi yang mengantarkan isi buku secara praktis dan menyenangkan.<br>
 						<br>
 						Penasaran?
 
