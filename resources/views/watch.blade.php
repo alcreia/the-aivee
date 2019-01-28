@@ -20,7 +20,7 @@
 				<a href="/books">Go to Book Page</a>
 			</div>
 			<div class="col-lg-4" id="app">
-				<chat-component></chat-component>
+				<chat-component :user="{{ auth()->user() }}" :watch="{{ $code }}"></chat-component>
 			</div>
 		</div>
 	</div>

@@ -53555,14 +53555,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         getComments: function getComments() {
             var _this = this;
 
-            axios.get('/api/videos/' + this.video.id + '/comments?api_token=' + this.user.api_token, {}).then(function (response) {
+            axios.get('/api/watch/' + this.watch.id + '/comments?api_token=' + this.user.api_token, {}).then(function (response) {
                 _this.comments = response.data;
             });
         },
         postComment: function postComment() {
             var _this2 = this;
 
-            axios.post('/api/videos/' + this.video.id + '/comment?api_token=' + this.user.api_token, {
+            axios.post('/api/watch/' + this.watch.id + '/comment?api_token=' + this.user.api_token, {
                 body: this.body
             }).then(function (response) {
                 _this2.comments.unshift(response.data);

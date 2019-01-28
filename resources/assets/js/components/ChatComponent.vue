@@ -70,13 +70,13 @@
         },
         methods: {
             getComments() {
-                axios.get('/api/videos/'+ this.video.id +'/comments?api_token=' + this.user.api_token, {})
+                axios.get('/api/watch/'+ this.watch.id +'/comments?api_token=' + this.user.api_token, {})
                 .then((response) => {
                     this.comments = response.data;
                 });
             },
             postComment() {
-                axios.post('/api/videos/'+ this.video.id +'/comment?api_token=' + this.user.api_token, {
+                axios.post('/api/watch/'+ this.watch.id +'/comment?api_token=' + this.user.api_token, {
                     body: this.body
                 })
                 .then((response) => {
