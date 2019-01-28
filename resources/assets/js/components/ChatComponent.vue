@@ -1,7 +1,7 @@
 <template>
 <div class="container">
     <div class="row">
-    <div class="col-sm-5">
+    <div class="col-sm-12">
             <div class="panel panel-primary">
                 <div class="panel-heading" id="accordion">
                     <span class="glyphicon glyphicon-comment"></span> Chat
@@ -42,9 +42,6 @@
             </div>
             </div>
         </div>
-        <div class="col-sm-7">
-            <iframe width="640" height="280" src="https://www.youtube.com/embed/Xip2TgAEVz4" frameborder="0" allowfullscreen></iframe>
-        </div>
     </div>
     <div class="row">
         <div class="col-sm-12">
@@ -58,12 +55,12 @@
 
 <script>
     export default {
-        props: ['user', 'video'],
+        props: ['user', 'watch'],
         data() {
             return {
                 viewers: [],
                 comments: [],
-                body: 'Your comment',
+                body: '',
                 count: 0
             }
         },
@@ -87,7 +84,7 @@
                 });
             },
             listen() {
-                Echo.join('video')
+                Echo.join('watch')
                     .here((users) => {
                         this.count = users.length;
                     })

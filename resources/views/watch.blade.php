@@ -19,8 +19,8 @@
 				<a href="/home">Back to Homepage</a>
 				<a href="/books">Go to Book Page</a>
 			</div>
-			<div class="col-lg-4">
-				
+			<div class="col-lg-4" id="app">
+				<chat-component></chat-component>
 			</div>
 		</div>
 	</div>
