@@ -20,7 +20,9 @@
 				<a href="/books">Go to Book Page</a>
 			</div>
 			<div class="col-lg-4" id="app">
-				<chat-component :user="{{ auth()->user() }}" :watch="{{ $code }}"></chat-component>
+				<p id="chat">
+					The chat feature is currently under construction. We apologize for the inconvenience.
+				</p>
 			</div>
 		</div>
 	</div>

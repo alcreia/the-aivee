@@ -10,7 +10,7 @@ class Video extends Model
 
     protected $fillable = ['embed_link'];
 
-        public function comments()
+    public function comments()
     {
     	return $this->hasMany(Comment::class);
     }

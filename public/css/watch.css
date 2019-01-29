@@ -17,3 +17,15 @@ a, a:hover {
 	color: #ffcc00;
 	margin: auto 30px;
 }
+
+#app {
+	border: 1px solid #ffcc00;
+	border-right: 0;
+	background-color: #ffcc0020;
+}
+#chat {
+	font-size: 1.5rem;
+	text-align: center;
+	margin-top: 50%;
+
+}

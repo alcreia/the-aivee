@@ -17,7 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::group(['middleware' => ['auth:api']], function () {
-	Route::get('/watch/{video}/comments', 'CommentController@index');
-	Route::post('/watch/{video}/comment', 'CommentController@store');
+Route::group([], function () {
+	Route::get('/watch/{id}/comments', 'CommentController@index');
+	Route::post('/watch/{id}/comment', 'CommentController@store');
 });

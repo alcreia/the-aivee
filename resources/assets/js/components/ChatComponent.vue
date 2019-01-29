@@ -32,6 +32,7 @@
                 </div>
                 <div class="panel-footer">
                     <div class="input-group">
+                        
                         <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." v-model="body" @keyup.enter="postComment()" />
                         <span class="input-group-btn">
                             <button class="btn btn-warning btn-sm" id="btn-chat" @click.prevent="postComment()">
@@ -70,13 +71,13 @@
         },
         methods: {
             getComments() {
-                axios.get('/api/watch/'+ this.watch.id +'/comments?api_token=' + this.user.api_token, {})
+                axios.get('/api/watch/'+ this.code +'/comments', {})
                 .then((response) => {
                     this.comments = response.data;
                 });
             },
             postComment() {
-                axios.post('/api/watch/'+ this.watch.id +'/comment?api_token=' + this.user.api_token, {
+                axios.post('/api/watch/'+ this.code +'/comment', {
                     body: this.body
                 })
                 .then((response) => {

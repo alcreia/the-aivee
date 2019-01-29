@@ -6,7 +6,7 @@
 </div>
 
 <div class="cover">
-	<a href="javascript:SwapDivsWithClick('intro','intro2')"><img src="{{URL::asset('img/cover/cover1.jpg')}}" id="cover"></a>
+	<a href="javascript:void(0)" onclick="SwapDivsWithClick()"><img src="{{URL::asset('img/cover/cover1.jpg')}}" id="cover"></a>
 </div>
 
 <div class="cover2">

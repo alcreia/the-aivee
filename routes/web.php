@@ -19,7 +19,7 @@ Route::get('/signup', function () {
     return view('signup');
 });
 
-Route::get('/watch/{id}', 'VideoController@index')->middleware('auth');
+Route::get('/watch/{id}', 'VideoController@index');
 
 Route::get('/books', 'BookController@index');
 

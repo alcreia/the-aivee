@@ -25,7 +25,7 @@
 				</div>
 				<div id="intro2">
 					<div>	
-						<iframe src="https://www.youtube.com/embed/HMPUMIbsxNU?controls=0&rel=0">
+						<iframe src="https://www.youtube.com/embed/BFh0Ul-snOc?controls=0&rel=0">
 						</iframe>
 					</div>
 					<div class="row bars">
@@ -51,7 +51,7 @@
 				</div>
 
 				<div class="cover">
-					<a href="javascript:SwapDivsWithClick('intro','intro2')"><img src="{{URL::asset('img/cover/cover1.jpg')}}" id="cover"></a>
+					<a href="javascript:void(0)" onclick="SwapDivsWithClick('intro','intro2')"><img src="{{URL::asset('img/cover/cover1.jpg')}}" id="cover"></a>
 				</div>
 
 				<div class="cover2">
