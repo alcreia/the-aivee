@@ -86,9 +86,13 @@ class RegisterController extends Controller
 
     public function register(Request $request)
     {
-        $this->validator($request->all());
-        $user = User::create($request->all());
-        $user->save();
-        Auth::login($user);
+        $validator = $this->validator($request->all());
+        if (($validator->fails()) || (User::where('email', '=', $request['email'])->exists())) {
+            return redirect('/signup');
+        } else {
+            $user = User::create($request->all());
+            $user->save();
+            Auth::login($user);
+        }
     }
 }
