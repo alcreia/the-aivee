@@ -78,7 +78,9 @@
             },
             postComment() {
                 axios.post('/api/watch/'+ this.code +'/comment', {
-                    body: this.body
+                    body: this.body,
+                    video_id: this.$videoId,
+                    user_id: this.$userId
                 })
                 .then((response) => {
                     this.comments.unshift(response.data);

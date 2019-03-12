@@ -5,6 +5,8 @@
 	@include('scripts.head')
 	<link rel='stylesheet 'href={{URL::asset('css/watch.css')}} type='text/css'>
 	<meta name="csrf-token" content="{{csrf_token()}}">
+	@if(Auth::check()) <meta name="user-id" content="{{ Auth::user()->id }}"> @endif
+	<meta name="video-id" content="{{ $code }}">
 </head>
 <body>
 	<!-- Code -->

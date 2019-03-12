@@ -16,6 +16,8 @@ window.Vue = require('vue');
  */
 
 Vue.component('chat-component', require('./components/ChatComponent.vue'));
+Vue.prototype.$userId = document.querySelector("meta[name='user-id']").getAttribute('content');
+Vue.prototype.$videoId = document.querySelector("meta[name='video-id']").getAttribute('content');
 
 const app = new Vue({
     el: '#app'
