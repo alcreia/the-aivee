@@ -4,6 +4,7 @@
 	<title>watch - iv-book</title>
 	@include('scripts.head')
 	<link rel='stylesheet 'href={{URL::asset('css/watch.css')}} type='text/css'>
+	<meta name="csrf-token" content="{{csrf_token()}}">
 </head>
 <body>
 	<!-- Code -->
@@ -20,9 +21,7 @@
 				<a href="/books">Go to Book Page</a>
 			</div>
 			<div class="col-lg-4" id="app">
-				<p id="chat">
-					The chat feature is currently under construction. We apologize for the inconvenience.
-				</p>
+				<chat-component code="{{$code}}"></chat-component>
 			</div>
 		</div>
 	</div>
