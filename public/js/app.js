@@ -1010,9 +1010,9 @@ window._ = __webpack_require__(12);
  */
 
 try {
-    window.$ = window.jQuery = __webpack_require__(14);
+  window.$ = window.jQuery = __webpack_require__(14);
 
-    __webpack_require__(15);
+  __webpack_require__(15);
 } catch (e) {}
 
 /**
@@ -1034,9 +1034,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var token = document.head.querySelector('meta[name="csrf-token"]');
 
 if (token) {
-    window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
 } else {
-    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
 /**
@@ -1050,10 +1050,10 @@ if (token) {
 window.Pusher = __webpack_require__(36);
 
 window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo__["a" /* default */]({
-    broadcaster: 'pusher',
-    key: '3f3fd0b7dd79c364d92e',
-    cluster: 'ap1',
-    encrypted: true
+  broadcaster: 'pusher',
+  key: '3f3fd0b7dd79c364d92e',
+  cluster: 'ap1',
+  encrypted: true
 });
 
 /***/ }),
@@ -53625,9 +53625,9 @@ var render = function() {
                         _vm._v(" "),
                         _c("p", [
                           _vm._v(
-                            "\n                                    " +
+                            "\r\n                                    " +
                               _vm._s(comment.body) +
-                              "\n                                "
+                              "\r\n                                "
                           )
                         ])
                       ])
@@ -53693,7 +53693,7 @@ var render = function() {
                           }
                         }
                       },
-                      [_vm._v("\n                                Send")]
+                      [_vm._v("\r\n                                Send")]
                     )
                   ])
                 ])
@@ -53708,9 +53708,9 @@ var render = function() {
       _c("div", { staticClass: "col-sm-12" }, [
         _c("h1", [
           _vm._v(
-            "\n                " +
+            "\r\n                " +
               _vm._s(_vm.count) +
-              " watching now\n            "
+              " watching now\r\n            "
           )
         ])
       ])
@@ -53727,7 +53727,7 @@ var staticRenderFns = [
       { staticClass: "panel-heading", attrs: { id: "accordion" } },
       [
         _c("span", { staticClass: "glyphicon glyphicon-comment" }),
-        _vm._v(" Chat\n                    "),
+        _vm._v(" Chat\r\n                    "),
         _c("div", { staticClass: "btn-group pull-right" }, [
           _c(
             "a",
