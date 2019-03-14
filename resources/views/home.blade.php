@@ -29,14 +29,11 @@
 						</iframe>
 					</div>
 					<div class="row bars">
-						<div class="col-sm-6">
+						<div class="col-sm-8">
 							<span id="booktitle">8 Langkah Ajaib Menuju ke Langit - Introduction</span>
 						</div>
-						<div class="col-sm-3">
-							<a href="/books"><img src="{{URL::asset('img/logo/seemore.png')}}" id='buttons'></a>
-						</div>
-						<div class="col-sm-3">
-							<a href="/watch/1"><img src="{{URL::asset('img/logo/watchnow.png')}}" id="buttons"></a>
+						<div class="col-sm-4">
+							<a href="/books/1"><img src="{{URL::asset('img/logo/seemore.png')}}" id='buttons'></a>
 						</div>
 					</div>
 				</div>

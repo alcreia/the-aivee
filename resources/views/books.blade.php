@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> 8 Langkah Ajaib Menuju ke Langit - iv-book</title>
+	<title> {{$title}} - iv-book</title>
 	@include('scripts.head')
 	<link rel='stylesheet 'href={{URL::asset('css/books.css')}} type='text/css'>
 	<link rel='stylesheet 'href={{URL::asset('css/navbar.css')}} type='text/css'>
@@ -13,7 +13,7 @@
 		<div class="row content">
 			<div class="col-lg-3 cover-etc">
 				<div>
-					<img src="{{URL::asset('img/cover/cover1.jpg')}}" id="cover">
+					<img src="{{URL::asset($cover)}}" id="cover">
 				</div>
 				@if ($premium === 1)
 				<div>
@@ -30,25 +30,11 @@
 				@endif
 			</div>
 			<div class="col-lg-5 synopsis">
-				<span>Victor Asih - 8 Langkah Ajaib Menuju ke Langit</span>
+				<span>{{$title}}</span>
 				<br>
 				<br>
 				<p id="synopsis">
-					Beberapa kesaksian pembaca buku "8 Langkah Ajaib Menuju ke Langit".
-					<br><br>
-					Buku 8 Langkah Ajaib Menuju ke Langit ini memberikan acuan sistematika tentang cara mendefinisikan dan mencapai sukses. <br>- Djoko Santoso, Rektor Institut Teknologi Bandung (ITB).
-					<br><br>
-					Teori yang baik adalah teori yang telah dipraktikkan dalam kehidupan nyata.. bisa memberikan hasil yang luar biasa. Sebaliknya, praktik yang antusias, jika ditorikan akan menginspirasi banyak orang juga. Teori dan praktik semacam itulah yang tersua dalam buku ini. BACALAH!. <br>- Andrias Harefa, Pembelajar Mindset Transformation, Penulis 30 buku best-seller.
-					<br><br>
-					Adapun yang dibahas dalam buku ini :<br>
-					- Berani membuat impian atau cita-cita<br>
-					- Menentukan impian Anda dengan jelas<br>
-					- Menguji impian Anda, apakah sudah SMART+O?<br>
-					- Membuat peta perjalanan menuju impian<br>
-					- Menentukan alat/sistem/kendaraan untuk mencapai impian Anda<br>
-					- Fokuskan semua pikiran dan tindakan nyata untuk mencapai impian Anda<br>
-					- Menyelesaikan sesuai rencana<br>
-					- Jika impian telah tercapai, buatlah impian baru yang lebih besar
+					{!!$synopsis!!}
 				</p>
 			</div>
 			@if ($premium === 1)

@@ -21,7 +21,7 @@ Route::get('/signup', function () {
 
 Route::get('/watch/{id}', 'VideoController@index');
 
-Route::get('/books', 'BookController@index');
+Route::get('/books/{id}', 'BookController@index');
 
 Route::get('/payment', 'PaymentController@index');
 

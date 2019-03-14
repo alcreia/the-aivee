@@ -11,10 +11,18 @@ class BookController extends Controller
 {
     //
 	
-    public function index()
+    public function index($id)
     {
     	$premium = DB::table('purchases')->where('user_id', Auth::user()->id)->value('purchased');
+    	$title = DB::table('books')->where('id', $id)->value('title');
+    	$synopsis = DB::table('books')->where('id', $id)->value('synopsis');
+    	$cover = DB::table('books')->where('id', $id)->value('cover');
 
-    	return view('books', ['premium' => $premium]);
+    	return view('books', [
+    		'premium' => $premium,
+    		'title' => $title,
+    		'synopsis' => $synopsis,
+    		'cover' => $cover
+    	]);
     }
 }
