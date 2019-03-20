@@ -1,6 +1,12 @@
 body {
-	background-color: #262626;
+	background-color: #efe6d6;
 	font-family: 'Fredoka One', cursive;
+}
+
+.btn-default {
+	color: #636b6f;
+	background-color: #3eccfd;
+	border-color: #3eccfd;
 }
 
 #title {
@@ -20,7 +26,7 @@ img {
 
 .content, .text {
 	text-align: center;
-	color: #f2f2f2;
+	color: #262626;
 	font-size: 0.85rem;
 }
 
@@ -34,4 +40,56 @@ img {
 	background-color: transparent;
 	padding: 0.25em 2.25em;
 	margin: 1.25em;
+	color: #262626;
+}
+
+@media only screen and (max-width: 1000px) {
+	body {
+		background-color: #efe6d6; /* Red */
+	}
+
+	#title {
+		color: #ffcc00;
+		font-size: 1.5rem;
+	}
+	
+	#logotitle {
+		height: 300px;
+	}
+	
+	img {
+		height: 120px;
+		margin-top: -20%;
+		margin-bottom: -20%;
+	}
+	
+	.content, .text {
+		text-align: center;
+		color: #262626;
+		font-size: 0.85rem;
+	}
+	
+	.container {
+		margin-top: 10%;
+	}
+	
+	.btn-primary {
+		border: 2px solid #0059b3;
+		border-radius: 2.5em;
+		background-color: transparent;
+		padding: 0.25em 2.25em;
+		margin: 1.25em;
+		color: #262626;
+	}
+
+	.col-sm-3 {
+		flex: 0 0 0%;
+   		max-width: 0%;
+	}
+
+	.col-sm-6 {
+		flex: 0 0 100%;
+		max-width: 100%;
+		font-size: 1.5rem;
+	}
 }
