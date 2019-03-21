@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
-    //
+		//
 
     public function index(Video $video)
     {
@@ -22,10 +22,10 @@ class CommentController extends Controller
     {
     	$comment = $video->comments()->create([
     		'body' => request('body'),
-    		'user_id' => auth()->user()->id,
-    		'video_id' => $video->id
+    		'user_id' => request('user_id'),
+    		'video_id' => request('video_id')
 		]);
-        $comment = Comment::where('id', $comment->id)->with('user')->first();
+    $comment = Comment::where('id', $comment->id)->with('user')->first();
 		broadcast(new NewComment($comment))->toOthers();
 		return $comment;
     }
