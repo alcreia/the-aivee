@@ -43,11 +43,12 @@ body {
 	transition: 0.5s;
 }
 
-#intro2 {
+#intro2, #intro3 {
 	display: none;
 	padding: 15vh 0;
 	height: 100%;
 	transition: 0.5s;
+	z-index: 2;
 }
 
 #buttons {

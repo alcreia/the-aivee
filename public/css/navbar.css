@@ -55,11 +55,12 @@
     padding-top: 60px;
     margin: auto;
     transition: 0.3s;
-    color: #262626;
+    
 }
 
 #aboutUs p, #contactUs p, #disclaimer p {
     padding: 50px;
+    color: #BEBEBE;
 }
 
 #aboutUs span, #contactUs span {

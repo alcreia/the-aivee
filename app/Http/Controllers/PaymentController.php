@@ -11,17 +11,19 @@ class PaymentController extends Controller
 {
     //
 
-    public function index()
+    public function index($id)
     {
-    	$user = Purchase::firstOrCreate(['user_id' => Auth::user()->id],['book_id' => 1, 'purchase_code' => Purchase::generateCode()]);
+    	
+    	$code = DB::table('purchases')->where('book_id', $id)->where('user_id', Auth::user()->id)->value('purchase_code');
+        $premium = DB::table('purchases')->where('book_id', $id)->where('user_id', Auth::user()->id)->value('purchased');
+        $img = DB::table('books')->where('id', $id)->value('cover');
 
-    	$code = DB::table('purchases')->where('user_id', Auth::user()->id)->value('purchase_code');
-    	$premium = DB::table('purchases')->where('user_id', Auth::user()->id)->value('purchased');
+        $user = Purchase::firstOrCreate(['book_id' => $id],['user_id' => Auth::user()->id, 'purchase_code' => Purchase::generateCode()]);
         
         if ($premium === 1) {
-            return redirect()->action('BookController@index');
+            return redirect()->action('BookController@index', array('id' => $id));
         } else {
-    		return view('payment',['code' => $code]);
+    		return view('payment',['code' => $code, 'img' => $img, 'id' => $id]);
     	}
     }
 }

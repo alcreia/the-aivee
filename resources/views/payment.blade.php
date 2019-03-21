@@ -13,7 +13,7 @@
 		<div class="row">
 			<div class="col-lg-3 cover-etc">
 				<div>
-					<img src="{{URL::asset('img/cover/cover1.jpg')}}" id="cover">
+					<img src="{{URL::asset($img)}}" id="cover">
 				</div>
 			</div>
 			<div class="col-lg-9 text">
@@ -27,7 +27,7 @@
 				<p>Konfirmasi pembelian akan dilakukan 1x24 jam setelah pengiriman e-mail.</p>
 
 				<a href="/home">Back to Homepage</a>
-				<a href="/books">Go to Book Page</a>
+				<a href="/books/{{$id}}">Go to Book Page</a>
 			</div>
 		</div>		
 	</div>

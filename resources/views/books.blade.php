@@ -15,15 +15,21 @@
 				<div>
 					<img src="{{URL::asset($cover)}}" id="cover">
 				</div>
-				@if ($premium === 1)
+				@if ($premium == 1)
 				<div>
+					@if ($id == 1)
 					<a href="/watch/1" class="read">
 						<img src="{{URL::asset('img/logo/readbook.png')}}" id="buylogo">
 					</a>
+					@elseif ($id == 2)
+					<a href="/watch/21" class="read">
+						<img src="{{URL::asset('img/logo/readbook.png')}}" id="buylogo">
+					</a>
+					@endif
 				</div>
 				@else
 				<div>
-					<a href="/payment" class="buy">
+					<a href="/payment/{{$id}}" class="buy">
 						<img src="{{URL::asset('img/logo/purchase.png')}}" id="buylogo">
 					</a>
 				</div>
@@ -37,7 +43,7 @@
 					{!!$synopsis!!}
 				</p>
 			</div>
-			@if ($premium === 1)
+			@if ($id == '1')
 			<div class="col-lg-4">
 				<div class="chapters">
 					<div class="accordion" id="accordionExample">
@@ -56,6 +62,7 @@
 						      </div>
 						    </div>
 						  </div>
+						  	@if ($premium == 1)
 						  <div class="card">
 						    <div class="card-header" id="headingTwo">
 						      <h5 class="mb-0">
@@ -161,15 +168,58 @@
 						      </div>
 						    </div>
 						  </div>
+						  @else
+								<p>Purchase the book to access more chapters!</p>
+							@endif
+						</div>
+					</div>
+			</div>
+			@elseif ($id == '2')
+			<div class="col-lg-4">
+				<div class="chapters">
+					<div class="accordion" id="accordionExample">
+						  <div class="card">
+						    <div class="card-header" id="headingOne">
+						      <h5 class="mb-0">
+						        <p><a href="/watch/21">Chapter 1</a></p>
+						      </h5>
+						    </div>
+						  </div>
+						  	@if ($premium == 1)
+						  <div class="card">
+						    <div class="card-header" id="headingOne">
+						      <h5 class="mb-0">
+						        <p><a href="/watch/22">Chapter 2</a></p>
+						      </h5>
+						    </div>
+						  </div>
+						  <div class="card">
+						    <div class="card-header" id="headingOne">
+						      <h5 class="mb-0">
+						        <p><a href="/watch/23">Chapter 3</a></p>
+						      </h5>
+						    </div>
+						  </div>
+						  <div class="card">
+						    <div class="card-header" id="headingOne">
+						      <h5 class="mb-0">
+						        <p><a href="/watch/24">Chapter 4</a></p>
+						      </h5>
+						    </div>
+						  </div>
+						  <div class="card">
+						    <div class="card-header" id="headingOne">
+						      <h5 class="mb-0">
+						        <p><a href="/watch/25">Chapter 5</a></p>
+						      </h5>
+						    </div>
+						  </div>
+						  @else
+								<p>Purchase the book to access more chapters!</p>
+							@endif
 						</div>
 
 					</div>
-			</div>
-			@else
-			<div class="col-lg-4">
-				<div class="chapters">
-					<p>Purchase the book to access the chapters!</p>
-				</div>
 			</div>
 			@endif
 		</div>

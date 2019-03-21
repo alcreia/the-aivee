@@ -23,7 +23,7 @@ Route::get('/watch/{id}', 'VideoController@index');
 
 Route::get('/books/{id}', 'BookController@index');
 
-Route::get('/payment', 'PaymentController@index');
+Route::get('/payment/{id}', 'PaymentController@index');
 
 Auth::routes();
 

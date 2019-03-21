@@ -30,10 +30,24 @@
 					</div>
 					<div class="row bars">
 						<div class="col-sm-8">
-							<span id="booktitle">8 Langkah Ajaib Menuju ke Langit - Introduction</span>
+							<span id="booktitle">8 Langkah Ajaib Menuju ke Langit - Trailer</span>
 						</div>
 						<div class="col-sm-4">
 							<a href="/books/1"><img src="{{URL::asset('img/logo/seemore.png')}}" id='buttons'></a>
+						</div>
+					</div>
+				</div>
+				<div id="intro3">
+					<div>	
+						<iframe src="https://www.youtube.com/embed/COuNKcdQ06k?controls=0&rel=0">
+						</iframe>
+					</div>
+					<div class="row bars">
+						<div class="col-sm-8">
+							<span id="booktitle">Days With You - Trailer</span>
+						</div>
+						<div class="col-sm-4">
+							<a href="/books/2"><img src="{{URL::asset('img/logo/seemore.png')}}" id='buttons'></a>
 						</div>
 					</div>
 				</div>
@@ -47,37 +61,40 @@
 					</p>
 				</div>
 
-				<div class="cover">
-					<a href="javascript:void(0)" onclick="SwapDivsWithClick('intro','intro2')"><img src="{{URL::asset('img/cover/cover1.jpg')}}" id="cover"></a>
+				<div id="cover">
+					<a href="#"><img src="{{URL::asset('img/cover/cover1.jpg')}}" class="cover"></a>
 				</div>
 
-				<div class="cover2">
-					<img src="{{URL::asset('img/cover/covertest.jpg')}}" id="cover">
+				<div id="cover2">
+					<a href="#" onclick="openBook('intro3');"><img src="{{URL::asset('img/cover/cover2.jpg')}}" class="cover"></a>
 				</div>
 
-				<div class="cover">
-					<img src="{{URL::asset('img/cover/covertest.jpg')}}" id="cover">
+				<div id="covertest">
+					<img src="{{URL::asset('img/cover/covertest.jpg')}}" class="cover">
 				</div>
 			</div>
 		</div>
 	</div>
 	@include('scripts.footerscript')
-	<script type="text/javascript">
-		function SwapDivsWithClick(div1,div2)
-		{
-		   d1 = document.getElementById(div1);
-		   d2 = document.getElementById(div2);
-		   if( d2.style.display == "none" )
-		   {
-		      d1.style.display = "none";
-		      d2.style.display = "block";
-		   }
-		   else
-		   {
-		      d1.style.display = "block";
-		      d2.style.display = "none";
-		   }
-		}
+	<script>
+		$("#cover").click(function(e){
+			$("#intro2").toggle();
+			$("#intro3").hide();
+			if ($("#intro2").is(":visible")) {
+				$("#intro").hide();
+			} else {
+				$("#intro").show();
+			}
+		});
+		$("#cover2").click(function(e){
+			$("#intro3").toggle();
+			$("#intro2").hide();
+			if ($("#intro3").is(":visible")) {
+				$("#intro").hide();
+			} else {
+				$("#intro").show();
+			}
+		});
 	</script>
 
 

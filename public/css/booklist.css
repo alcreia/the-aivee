@@ -1,19 +1,19 @@
-#cover {
+.cover {
 	width: 125px;
 
 }
 
-.cover, .cover2 {
+#cover, #cover2 {
 	position: relative;
 	margin: 25px 10%;
 	box-shadow: 8px 8px 5px black;
 }
 
-.cover {
+#cover, #covertest {
 	float: left;
 }
 
-.cover2 {
+#cover2 {
 	float: right;
 }
 
