@@ -82,9 +82,9 @@
 						</div>
 					</div>
 					<div class="form-group row">
-					    <label for="password-confirmation" class="col-lg-4">Rewrite Password:</label>
+					    <label for="password_confirmation" class="col-lg-4">Rewrite Password:</label>
 						<div class="col-lg-8">
-							<input type="password" class="form-control" id="password-confirmation">
+							<input type="password" name='password_confirmation' class="form-control" id="password_confirmation">
 						</div>
 					</div>
 					<div class="submit-wrap">

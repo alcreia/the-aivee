@@ -52,11 +52,11 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|string|max:255',
-            'dob' => 'required|date_format:d/m/Y',
+            'dob' => 'required|date_format:Y-m-d',
             'country' => 'required|string|max:255',
             'city' => 'required|string|max:255',
             'address' => 'nullable|string|max:255',
-            'postal' => 'nullable|numeric|max:15',
+            'postal' => 'nullable|string|max:15',
             'phone' => 'nullable|digits_between:10,12',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
@@ -87,12 +87,13 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
         $validator = $this->validator($request->all());
-        if (($validator->fails()) || (User::where('email', '=', $request['email'])->exists())) {
-            return redirect('/signup');
+        if (($validator->fails())) {
+            return redirect('/signup')->withErrors($validator);
         } else {
             $user = User::create($request->all());
             $user->save();
             Auth::login($user);
+            return redirect('/home');
         }
     }
 }
