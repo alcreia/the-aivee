@@ -2,8 +2,15 @@ body {
 	font-family: 'Fredoka One', cursive;
 }
 
+.booklist::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
 .content, .booklist {
 	height: 100%;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
 
 .content {
@@ -13,6 +20,7 @@ body {
 }
 
 .booklist {
+	padding-bottom: 10%;
 	background-color: #ffcc00;
 	position: fixed;
 	right: 0;
@@ -26,9 +34,9 @@ body {
 }
 
 #logotitle {
-	height: 500px;
-	margin-top: -180px;
-	margin-bottom: -180px;
+	height: 70vh;
+	margin-top: -18%;
+	margin-bottom: -18%;
 }
 
 #desc {
@@ -38,7 +46,7 @@ body {
 
 #intro {
 	text-align: center;
-	padding: 25vh 0;
+	padding: 15vh 0;
 	display: block;
 	transition: 0.5s;
 }
@@ -48,7 +56,7 @@ body {
 	padding: 15vh 0;
 	height: 100%;
 	transition: 0.5s;
-	z-index: 2;
+	z-index: 1;
 }
 
 #buttons {

@@ -4,9 +4,10 @@
 	<title>sign up - iv-book</title>
 	@include('scripts.head')
 	<link rel='stylesheet 'href={{URL::asset('css/signup.css')}} type='text/css'>
+	<link rel='stylesheet 'href={{URL::asset('css/navbar.css')}} type='text/css'>
 </head>
 <body>
-	@include('layouts.header')
+	@include('layouts.navbar')
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4"></div>	
@@ -21,7 +22,7 @@
 		        </div>
 		        @endif
 				<div class="title">
-					<img src="{{URL::asset('img/logo/type-inverse.png')}}" id='logo'/>
+					<img src="{{URL::asset('img/logo/type.png')}}" id='logo'/>
 					Sign Up
 				</div>
 				<form class="form" method="POST" action="{{ route('register') }}">

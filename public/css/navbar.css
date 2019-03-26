@@ -1,9 +1,19 @@
+nav {
+    width: 100%;
+}
+
+a {
+    color: #eebb00;
+}
+
+a:hover {
+    color: #eecc66;
+}
+
 .navbar {
-	padding: 15px 0;
 	position: fixed;
 	top: 0;
 	z-index: 1;
-	background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
 }
 
 #logo {
@@ -12,58 +22,30 @@
 	margin-bottom: -20%;
 }
 
-.sidenav {
-    height: 100%;
-    width: 0;
+.modal-content {
+    background-color: #efe6d6;
+}
+
+.modal-header {
+    background-color: #262626;
+}
+
+#aboutUsModal, #contactUsModal, #disclaimerModal {
+    width: 100%;
     position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.5s;
-}
-
-/* The navigation menu links */
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-#aboutUs, #contactUs, #disclaimer {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 20%;
-    background-color: rgba(0,0,0,0.9);
     overflow-x: hidden;
     padding-top: 60px;
     margin: auto;
     transition: 0.3s;
-    
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-#aboutUs p, #contactUs p, #disclaimer p {
-    padding: 50px;
-    color: #BEBEBE;
+#aboutUsModal p, #contactUsModal p, #disclaimerModal p {
+    color: #242424;
 }
 
-#aboutUs span, #contactUs span {
+.modal-header span {
     font-size: 1.25rem;
     color: #ffcc00;
 }

@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'HomeController@index');
 
 Route::get('/signup', function () {
     return view('signup');
@@ -26,5 +24,3 @@ Route::get('/books/{id}', 'BookController@index');
 Route::get('/payment/{id}', 'PaymentController@index');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index');
