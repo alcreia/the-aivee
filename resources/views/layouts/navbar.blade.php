@@ -74,7 +74,7 @@
 						<input type="password" name='password' class="form-control" id="password">
 					</div>
 					<button type="submit" class="btn btn-primary">Login</button>
-					<a href="/{{ route('register') }}">Don't have account?</a>
+					<a href="{{ route('register') }}">Don't have account?</a>
 				</form>
 			</div>
 		</div>
@@ -113,9 +113,9 @@
 			</div>
 			<div class="modal-body">
 				<p>
-					[+62] 815 7055 169<br><br>
-					theaivee.co@gmail.com<br><br>
-					Bandung, Jawa Barat, Indonesia<br><br>
+					<i class="fas fa-phone" aria-hidden="true"></i>[+62] 815 7055 169<br><br>
+					<i class="far fa-envelope"></i> theaivee.co@gmail.com<br><br>
+					<i class="fas fa-home"></i> Bandung, Jawa Barat, Indonesia<br><br>
 				</p>
 			</div>
 		</div>

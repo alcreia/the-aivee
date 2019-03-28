@@ -26,7 +26,7 @@
 				<p>Kemudian email bukti transfer ke theaivee.co@gmail.com</p>
 				<p>Konfirmasi pembelian akan dilakukan 1x24 jam setelah pengiriman e-mail.</p>
 
-				<a href="/home">Back to Homepage</a>
+				<a href="/">Back to Homepage</a>
 				<a href="/books/{{$id}}">Go to Book Page</a>
 			</div>
 		</div>		

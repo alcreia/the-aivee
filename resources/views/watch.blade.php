@@ -19,7 +19,7 @@
 				allowfullscreen allow="autoplay">
 				</iframe>
 
-				<a href="/home">Back to Homepage</a>
+				<a href="/">Back to Homepage</a>
 				<a href="/books">Go to Book Page</a>
 			</div>
 			<div class="col-lg-4" id="app">
