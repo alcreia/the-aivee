@@ -4,7 +4,7 @@
 		<img src="{{URL::asset('img/logo/type-inverse.png')}}" id='logo'/>
 	</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		<span><img src="{{URL::asset('img/logo/threelines.png')}}" id="logo"></span>
+		<span><img src="{{URL::asset('img/logo/threelines.png')}}" id="button"></span>
 	</button>
 
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">

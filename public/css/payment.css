@@ -9,14 +9,14 @@ body {
 	margin-top: 25vh;
 }
 
-a, a:hover {
-	color: #ffcc00;
+.navigate, .navigate:hover {
+	color: #eebb00;
 	margin: auto 30px;
 }
 
 #cover {
-	max-width: 300px;
-	max-height: 400px;
+	width: 50%;
+	height: auto;
 	border-radius: 10px;
 }
 
@@ -25,10 +25,23 @@ a, a:hover {
 }
 
 .highlight {
-	color: #ffcc00;
+	color: #eebb00;
 }
 
 .code {
 	font-size: 1.5rem;
 }
 
+@media screen and (max-width: 576px) {
+	.text {
+		font-size: 0.8rem;
+	}
+
+	.code {
+		font-size: 1rem;
+	}
+
+	.navigate, .navigate:hover {
+	margin: auto 3vh;
+}
+}

@@ -8,21 +8,19 @@ body {
 }
 
 .content, .booklist {
-	height: 100%;
+	height: 100vh;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 }
 
 .content {
 	background-color: #efe6d6;
-	position: fixed;
 	float: left;
 }
 
 .booklist {
 	padding-bottom: 10%;
 	background-color: #ffcc00;
-	position: fixed;
 	right: 0;
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -34,14 +32,13 @@ body {
 }
 
 #logotitle {
-	height: 70vh;
-	margin-top: -18%;
-	margin-bottom: -18%;
+	max-height: 35vh;
+	margin: -5% auto;
 }
 
 #desc {
 	color: #262626;
-	padding: 0 25vh;
+	margin: auto;
 }
 
 #intro {
@@ -60,24 +57,48 @@ body {
 }
 
 #buttons {
-	width: 200px;
-	margin: -100px auto;
+	width: calc(100px + 5vw);
+	float: right;
+	bottom: 0;
 }
 
 iframe {
-	height: 75vh;
-	width: 100%;
-	margin-bottom: 5px;
+	height: 480px;
+	width: 720px;
 }
 
 .bars {
 	position: absolute;
-	bottom: 0;
-	margin-bottom: 20px;
+	bottom: 0 !important;
 	width: 100%;
+	vertical-align: text-bottom;
 }
 
-#booktitle {
+#bookheader {
 	color: white;
 	font-size: 1.6rem;
+	text-align: center;
+	margin-top: calc(60px + 5vh);
+}
+
+#vidtitle {
+	font-size: calc(8px + 0.5vh);
+	float: left
+}
+
+.video {
+	text-align: center;
+}
+
+@media screen and (min-width: 960px) {
+	#vidtitle {
+		font-size: calc(12px + 1vh)
+	}
+}
+
+@media screen and (max-width: 576px) {
+	iframe {
+	height: 180px;
+	width: 320px;
+}
 }

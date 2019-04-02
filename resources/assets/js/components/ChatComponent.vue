@@ -4,10 +4,10 @@
     <div class="col-sm-12">
             <div class="panel panel-primary">
                 <div class="panel-heading" id="accordion">
-                    <span class="glyphicon glyphicon-comment"></span> Chat
+                    <i class="fas fa-comments"></i> Chat
                     <div class="btn-group pull-right">
                         <a type="button" class="btn btn-default btn-xs" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                            <span class="glyphicon glyphicon-chevron-down"></span>
+                            <i class="fas fa-chevron-down"></i>
                         </a>
                     </div>
                 </div>
@@ -21,7 +21,7 @@
                             <div class="chat-body clearfix">
                                 <div class="header">
                                     <strong class="primary-font">{{ comment.user.name }}</strong> <small class="pull-right text-muted">
-                                        <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
+                                        <i class="fas fa-clock"></i>12 mins ago</small>
                                 </div>
                                 <p>
                                     {{ comment.body }}

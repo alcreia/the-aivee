@@ -27,5 +27,14 @@ a, a:hover {
 	font-size: 1.5rem;
 	text-align: center;
 	margin-top: 50%;
+}
 
+@media screen and (max-width: 576px) {
+	iframe {
+	height: 50vh;
+}
+
+a, a:hover {
+	margin: 1vh;
+}
 }

@@ -53,3 +53,7 @@ a:hover {
 #mini {
     font-size: 5px;
 }
+
+#button {
+    height: 5vh;
+}

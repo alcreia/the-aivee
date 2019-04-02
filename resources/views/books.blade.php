@@ -5,6 +5,8 @@
 	@include('scripts.head')
 	<link rel='stylesheet 'href={{URL::asset('css/books.css')}} type='text/css'>
 	<link rel='stylesheet 'href={{URL::asset('css/navbar.css')}} type='text/css'>
+	<meta name='viewport'
+      content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 </head>
 <body>
 	@include('layouts.navbar')
@@ -169,7 +171,7 @@
 						    </div>
 						  </div>
 						  @else
-								<p>Purchase the book to access more chapters!</p>
+								<p class="card-header">Purchase the book to access more chapters!</p>
 							@endif
 						</div>
 					</div>
@@ -215,7 +217,7 @@
 						    </div>
 						  </div>
 						  @else
-								<p>Purchase the book to access more chapters!</p>
+								<p class="card-header">Purchase the book to access more chapters!</p>
 							@endif
 						</div>
 
