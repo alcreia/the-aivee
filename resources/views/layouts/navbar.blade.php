@@ -28,7 +28,7 @@
 			<!-- Authentication Links -->
 			@guest
 			<li class="nav-item"><a class="nav-link" href="#" role="button" data-toggle="modal" data-target="#loginModal">Login</a></li>
-			<li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
+			<li class="nav-item"><a class="nav-link" href="/signup">Register</a></li>
 			@else
 			<li class="dropdown">
 				<a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
@@ -74,7 +74,7 @@
 						<input type="password" name='password' class="form-control" id="password">
 					</div>
 					<button type="submit" class="btn btn-primary">Login</button>
-					<a href="{{ route('register') }}">Don't have account?</a>
+					<a href="/password/reset">Forgot password?</a>
 				</form>
 			</div>
 		</div>

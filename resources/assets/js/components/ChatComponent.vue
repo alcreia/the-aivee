@@ -15,9 +15,6 @@
                 <div class="panel-body">
                     <ul class="chat">
                         <li class="left clearfix" v-for="comment in comments">
-                        <span class="chat-img pull-left">
-                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
-                        </span>
                             <div class="chat-body clearfix">
                                 <div class="header">
                                     <strong class="primary-font">{{ comment.user.name }}</strong> <small class="pull-right text-muted">
@@ -56,7 +53,7 @@
 
 <script>
     export default {
-        props: ['user', 'watch'],
+        props: ['userId', 'watch', 'code'],
         data() {
             return {
                 viewers: [],
@@ -79,11 +76,12 @@
             postComment() {
                 axios.post('/api/watch/'+ this.code +'/comment', {
                     body: this.body,
-                    video_id: this.$videoId,
-                    user_id: this.$userId
+                    video_id: this.code,
+                    user_id: this.userId
                 })
-                .then((response) => {
+                .then(response => {
                     this.comments.unshift(response.data);
+                    console.log(response.data);
                 });
             },
             listen() {

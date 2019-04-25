@@ -988,8 +988,6 @@ window.Vue = __webpack_require__(37);
  */
 
 Vue.component('chat-component', __webpack_require__(40));
-Vue.prototype.$userId = document.querySelector("meta[name='user-id']").getAttribute('content');
-Vue.prototype.$videoId = document.querySelector("meta[name='video-id']").getAttribute('content');
 
 var app = new Vue({
   el: '#app'
@@ -1012,9 +1010,9 @@ window._ = __webpack_require__(12);
  */
 
 try {
-    window.$ = window.jQuery = __webpack_require__(14);
+  window.$ = window.jQuery = __webpack_require__(14);
 
-    __webpack_require__(15);
+  __webpack_require__(15);
 } catch (e) {}
 
 /**
@@ -1036,9 +1034,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var token = document.head.querySelector('meta[name="csrf-token"]');
 
 if (token) {
-    window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
 } else {
-    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
 /**
@@ -1052,10 +1050,10 @@ if (token) {
 window.Pusher = __webpack_require__(36);
 
 window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo__["a" /* default */]({
-    broadcaster: 'pusher',
-    key: '7ab237d317848d822a2d',
-    cluster: 'ap1',
-    encrypted: true
+  broadcaster: 'pusher',
+  key: '3f3fd0b7dd79c364d92e',
+  cluster: 'ap1',
+  encrypted: true
 });
 
 /***/ }),
@@ -53587,12 +53585,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['user', 'watch'],
+    props: ['userId', 'watch', 'code'],
     data: function data() {
         return {
             viewers: [],
@@ -53619,10 +53614,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             axios.post('/api/watch/' + this.code + '/comment', {
                 body: this.body,
-                video_id: this.$videoId,
-                user_id: this.$userId
+                video_id: this.code,
+                user_id: this.userId
             }).then(function (response) {
                 _this2.comments.unshift(response.data);
+                console.log(response.data);
             });
         },
         listen: function listen() {
@@ -53668,22 +53664,20 @@ var render = function() {
                   { staticClass: "chat" },
                   _vm._l(_vm.comments, function(comment) {
                     return _c("li", { staticClass: "left clearfix" }, [
-                      _vm._m(1, true),
-                      _vm._v(" "),
                       _c("div", { staticClass: "chat-body clearfix" }, [
                         _c("div", { staticClass: "header" }, [
                           _c("strong", { staticClass: "primary-font" }, [
                             _vm._v(_vm._s(comment.user.name))
                           ]),
                           _vm._v(" "),
-                          _vm._m(2, true)
+                          _vm._m(1, true)
                         ]),
                         _vm._v(" "),
                         _c("p", [
                           _vm._v(
-                            "\n                                    " +
+                            "\r\n                                    " +
                               _vm._s(comment.body) +
-                              "\n                                "
+                              "\r\n                                "
                           )
                         ])
                       ])
@@ -53749,7 +53743,7 @@ var render = function() {
                           }
                         }
                       },
-                      [_vm._v("\n                                Send")]
+                      [_vm._v("\r\n                                Send")]
                     )
                   ])
                 ])
@@ -53764,9 +53758,9 @@ var render = function() {
       _c("div", { staticClass: "col-sm-12" }, [
         _c("h1", [
           _vm._v(
-            "\n                " +
+            "\r\n                " +
               _vm._s(_vm.count) +
-              " watching now\n            "
+              " watching now\r\n            "
           )
         ])
       ])
@@ -53782,8 +53776,8 @@ var staticRenderFns = [
       "div",
       { staticClass: "panel-heading", attrs: { id: "accordion" } },
       [
-        _c("span", { staticClass: "glyphicon glyphicon-comment" }),
-        _vm._v(" Chat\n                    "),
+        _c("i", { staticClass: "fas fa-comments" }),
+        _vm._v(" Chat\r\n                    "),
         _c("div", { staticClass: "btn-group pull-right" }, [
           _c(
             "a",
@@ -53796,7 +53790,7 @@ var staticRenderFns = [
                 href: "#collapseOne"
               }
             },
-            [_c("span", { staticClass: "glyphicon glyphicon-chevron-down" })]
+            [_c("i", { staticClass: "fas fa-chevron-down" })]
           )
         ])
       ]
@@ -53806,22 +53800,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("span", { staticClass: "chat-img pull-left" }, [
-      _c("img", {
-        staticClass: "img-circle",
-        attrs: {
-          src: "http://placehold.it/50/55C1E7/fff&text=U",
-          alt: "User Avatar"
-        }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("small", { staticClass: "pull-right text-muted" }, [
-      _c("span", { staticClass: "glyphicon glyphicon-time" }),
+      _c("i", { staticClass: "fas fa-clock" }),
       _vm._v("12 mins ago")
     ])
   }

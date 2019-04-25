@@ -27,7 +27,7 @@
 					<span class="highlight">Rp 49.600</span>
 					@endif
 				ke rekening di bawah ini</p>
-				<p>BCA <span class="highlight">8830211579</span> a.n. Meishelle Andriani Young</p> 
+				<p>BCA <span class="highlight">8831098163</span> a.n. Andrew Octavianus Michael</p> 
 				<p>atau</p>
 				<p>BTPN <span class="highlight">90012897710</span> a.n Felix Swarnadwipa</p>
 				<p>Tambahkan kode <span class="highlight code">{{$code}}</span> di berita transfer sebagai bukti verifikasi</p>	

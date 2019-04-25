@@ -60,6 +60,14 @@ class RegisterController extends Controller
             'phone' => 'nullable|digits_between:10,12',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+        ],[
+            'name.required' => 'This field is required',
+            'dob.required' => 'This field is required',
+            'country.required' => 'This field is required',
+            'city.required' => 'This field is required',
+            'email.mail' => 'Please enter a valid email',
+            'password.min' => 'Password must be at least 6 characters',
+            
         ]);
     }
 

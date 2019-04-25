@@ -4,6 +4,8 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Contracts\Auth\CanResetPassword;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
@@ -29,7 +31,7 @@ class User extends Authenticatable
 
     public function setPasswordAttribute($password)
     {
-        $this->attributes['password'] = \Hash::make($password);
+        return $this->attributes['password'] = Hash::needsRehash($password) ? Hash::make($password) : $password;
     }
 
     public function messages() 
