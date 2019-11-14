@@ -24,7 +24,6 @@ class CommentController extends Controller
     		'body' => request('body'),
             'video_id' => request('video_id'),
     		'user_id' => request('user_id'),
-
 		]);
     $comment = Comment::where('id', $comment->id)->with('user')->first();
 		broadcast(new NewComment($comment))->toOthers();

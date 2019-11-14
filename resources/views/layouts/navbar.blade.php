@@ -99,6 +99,7 @@
 					Marketing: Michelle Olga & Ananda Nur Yanto <br>
 					Human Resource: Pradna C.R<br>
 					Operation: Raden Arif Adi Nugroho & Gregorius Adhisakti Pradana <br>
+					Web Developer: topDoggo
 				</p>
 			</div>
 		</div>

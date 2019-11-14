@@ -43,6 +43,7 @@ a:hover {
 
 #aboutUsModal p, #contactUsModal p, #disclaimerModal p {
     color: #242424;
+    font-size: 0.9rem;
 }
 
 .modal-header span {

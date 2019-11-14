@@ -8,7 +8,7 @@ class Video extends Model
 {
     //
 
-    protected $fillable = ['embed_link'];
+    protected $fillable = ['video_id','embed_link'];
 
     public function comments()
     {
